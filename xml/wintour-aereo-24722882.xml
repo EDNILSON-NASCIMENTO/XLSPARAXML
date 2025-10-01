@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24722882</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13069</idv_externo>
+    <data_lancamento>03/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>ad</fornecedor>
+    <num_bilhete>3023339305</num_bilhete>
+    <prestador_svc>ad</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>2 ODONTOPREV SERVICOS LTDA</cliente>
+    <ccustos_cliente>504002 - ESCRITORIO COMERCIAL - BELO HORIZONTE - COMERCIAL (ESCRITORIOS REGIONAIS)</ccustos_cliente>
+    <solicitante>MARCELO ALVES</solicitante>
+    <aprovador>ELSEN CARMO</aprovador>
+    <departamento>BELO HORIZONTE</departamento>
+    <motivo_viagem>EVENTO COMERCIAL</motivo_viagem>
+    <motivo_recusa>-</motivo_recusa>
+    <matricula>307876</matricula>
+    <numero_requisicao>13069</numero_requisicao>
+    <localizador>WI79QF</localizador>
+    <passageiro>MARCELO ALVES</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>308.53</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>33.56</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>52.37</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CNF</aeroporto_origem>
+          <aeroporto_destino>BSB</aeroporto_destino>
+          <data_partida>07/08/2025</data_partida>
+          <classe>T</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>BSB</aeroporto_origem>
+          <aeroporto_destino>CNF</aeroporto_destino>
+          <data_partida>07/08/2025</data_partida>
+          <classe>T</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>-</info_adicionais>
+  </bilhete>
+</bilhetes>

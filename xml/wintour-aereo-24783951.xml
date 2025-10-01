@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24783951</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13289</idv_externo>
+    <data_lancamento>17/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>g3</fornecedor>
+    <num_bilhete>2141582147</num_bilhete>
+    <prestador_svc>g3</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>2 ODONTOPREV SERVICOS LTDA</cliente>
+    <ccustos_cliente>704002 - CENTRO INTEGRADO DE ATENDIMENTO - DIRETORIA DE ATENDIMENTO</ccustos_cliente>
+    <solicitante>ADRIANA SOUZA DE SOUZA</solicitante>
+    <aprovador>MARIANA AGOSTO</aprovador>
+    <departamento>OPERAÇAO MASSIFICADOS</departamento>
+    <motivo_viagem>TREINAMENTO MATRIZ</motivo_viagem>
+    <motivo_recusa>POR PRECO</motivo_recusa>
+    <matricula>307406</matricula>
+    <numero_requisicao>13289</numero_requisicao>
+    <localizador>WQQKRH</localizador>
+    <passageiro>ADRIANA SOUZA DE SOUZA</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>1716.69</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>104.89</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>SSA</aeroporto_origem>
+          <aeroporto_destino>CGH</aeroporto_destino>
+          <data_partida>08/09/2025</data_partida>
+          <classe>B/B</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CGH</aeroporto_origem>
+          <aeroporto_destino>SSA</aeroporto_destino>
+          <data_partida>08/09/2025</data_partida>
+          <classe>B/B</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>A MENOR TARIFA NAO CONTEMPLA FRANQUIA DE BAGAGEM NECESSARIA</info_adicionais>
+  </bilhete>
+</bilhetes>

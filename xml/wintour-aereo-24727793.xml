@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24727793</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13091</idv_externo>
+    <data_lancamento>04/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>ad</fornecedor>
+    <num_bilhete>3023344733</num_bilhete>
+    <prestador_svc>ad</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>2 ODONTOPREV SERVICOS LTDA</cliente>
+    <ccustos_cliente>104006 - CELULA 10 - BRADESCO DENTAL - COMERCIAL (POS VENDA)</ccustos_cliente>
+    <solicitante>IGOR COELHO</solicitante>
+    <aprovador>RAFAELA CERASO</aprovador>
+    <departamento>CÉLULA 10</departamento>
+    <motivo_viagem>REUNIAO COM CLIENTE</motivo_viagem>
+    <motivo_recusa>-</motivo_recusa>
+    <matricula>306095</matricula>
+    <numero_requisicao>13091</numero_requisicao>
+    <localizador>SQGYNX</localizador>
+    <passageiro>IGOR COELHO</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>364.79</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>59.95</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>58.06</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>SDU</aeroporto_origem>
+          <aeroporto_destino>VCP</aeroporto_destino>
+          <data_partida>14/08/2025</data_partida>
+          <classe>U</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>VCP</aeroporto_origem>
+          <aeroporto_destino>SDU</aeroporto_destino>
+          <data_partida>14/08/2025</data_partida>
+          <classe>U</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>-</info_adicionais>
+  </bilhete>
+</bilhetes>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24727811</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13072</idv_externo>
+    <data_lancamento>04/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>g3</fornecedor>
+    <num_bilhete>2140756167</num_bilhete>
+    <prestador_svc>g3</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>201008 - COMISSOES E CONTAS A RECEBER PJ - ADMINISTRATIVO FINANCEIRO (FINANCAS)</ccustos_cliente>
+    <solicitante>AMANDA RIBEIRO DA SILVA</solicitante>
+    <aprovador>POLIANE PEREIRA DOS SANTOS</aprovador>
+    <departamento>COMISSOES</departamento>
+    <motivo_viagem>REUNIAO COM FORNECEDOR</motivo_viagem>
+    <motivo_recusa>POR PRAZO POR PRECO</motivo_recusa>
+    <matricula>108764</matricula>
+    <numero_requisicao>13072</numero_requisicao>
+    <localizador>NRADID</localizador>
+    <passageiro>AMANDA RIBEIRO DA SILVA</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>650.37</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>120.57</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CGH</aeroporto_origem>
+          <aeroporto_destino>SDU</aeroporto_destino>
+          <data_partida>13/07/2025</data_partida>
+          <classe>B/B</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>SDU</aeroporto_origem>
+          <aeroporto_destino>CGH</aeroporto_destino>
+          <data_partida>13/07/2025</data_partida>
+          <classe>B/B</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>COMPROMISSO DEFINIDO POR TERCEIRO - HORARIO DO VOO MAIS BARATO NAO ATENDE A AGENDA</info_adicionais>
+  </bilhete>
+</bilhetes>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24822719</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13417</idv_externo>
+    <data_lancamento>28/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>ad</fornecedor>
+    <num_bilhete>3023448918</num_bilhete>
+    <prestador_svc>ad</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>CINTYA COCCO FIGUEIREDO</emissor>
+    <cliente>2 ODONTOPREV SERVICOS LTDA</cliente>
+    <ccustos_cliente>501014 - NOVOS NEGÓCIOS 1 OS - DIRETORIA COMERCIAL</ccustos_cliente>
+    <solicitante>GREICIELE FERREIRA DA SILVA</solicitante>
+    <aprovador>MOISES PINTO</aprovador>
+    <departamento>NOVOS NEGOCIOS 1 OS</departamento>
+    <motivo_viagem>DESENVOLVIMENTO DE NEGOCIOS</motivo_viagem>
+    <motivo_recusa>POR PRAZO POR PRECO</motivo_recusa>
+    <matricula>307589</matricula>
+    <numero_requisicao>13417</numero_requisicao>
+    <localizador>KPNZ5H</localizador>
+    <passageiro>GREICIELE FERREIRA DA SILVA</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>587.35</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>44.27</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>103.44</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>SSA</aeroporto_origem>
+          <aeroporto_destino>VIX</aeroporto_destino>
+          <data_partida>11/08/2025</data_partida>
+          <classe>U/U</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>VIX</aeroporto_origem>
+          <aeroporto_destino>SSA</aeroporto_destino>
+          <data_partida>11/08/2025</data_partida>
+          <classe>U/U</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>ATENDER SOLICITACAO DE CLIENTE - ATENDER SOLICITACAO DE CLIENTE</info_adicionais>
+  </bilhete>
+</bilhetes>

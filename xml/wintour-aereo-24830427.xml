@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24830427</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13464</idv_externo>
+    <data_lancamento>29/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>ad</fornecedor>
+    <num_bilhete>3023457331</num_bilhete>
+    <prestador_svc>ad</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>501008 - DIRETORIA COMERCIAL MASSIFICADOS - COMERCIAL MASSIFICADOS</ccustos_cliente>
+    <solicitante>TARCISIO MACHADO DE SA</solicitante>
+    <aprovador>ELSEN CARMO</aprovador>
+    <departamento>COMERCIAL MASSIFICADO</departamento>
+    <motivo_viagem>EVENTO COMERCIAL</motivo_viagem>
+    <motivo_recusa>POR PRAZO POR PRECO</motivo_recusa>
+    <matricula>107891</matricula>
+    <numero_requisicao>13464</numero_requisicao>
+    <localizador>CJVUWZ</localizador>
+    <passageiro>EDEVALDO MACHADO</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>668.60</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>59.95</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>115.93</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>SDU</aeroporto_origem>
+          <aeroporto_destino>VCP</aeroporto_destino>
+          <data_partida>12/08/2025</data_partida>
+          <classe>S</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>VCP</aeroporto_origem>
+          <aeroporto_destino>SDU</aeroporto_destino>
+          <data_partida>12/08/2025</data_partida>
+          <classe>S</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>COMPROMISSO DEFINIDO POR TERCEIRO - ATENDER SOLICITACAO DE CLIENTE</info_adicionais>
+  </bilhete>
+</bilhetes>

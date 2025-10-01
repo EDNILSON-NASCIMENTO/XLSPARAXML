@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24748826</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13166</idv_externo>
+    <data_lancamento>10/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>la</fornecedor>
+    <num_bilhete>2971298703</num_bilhete>
+    <prestador_svc>la</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>CINTYA COCCO FIGUEIREDO</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>503008 - INOVAÇÃO - MARKETING (MKT)</ccustos_cliente>
+    <solicitante>CLAUDIA TERESA SCAPIN CITTOLIN</solicitante>
+    <aprovador>MARIANA ANDRADE DE SOUZA</aprovador>
+    <departamento>PLANEJAMENTO E PROJETOS DE TI</departamento>
+    <motivo_viagem>REUNIAO MATRIZ</motivo_viagem>
+    <motivo_recusa>POR PRAZO POR PRECO</motivo_recusa>
+    <matricula>ODP110366</matricula>
+    <numero_requisicao>13166</numero_requisicao>
+    <localizador>UZYQMF</localizador>
+    <passageiro>CLAUDIA TERESA SCAPIN CITTOLIN</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>1521.56</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>111.54</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>la</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>FLN</aeroporto_origem>
+          <aeroporto_destino>CGH</aeroporto_destino>
+          <data_partida>22/07/2025</data_partida>
+          <classe>Q/Q</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>la</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CGH</aeroporto_origem>
+          <aeroporto_destino>FLN</aeroporto_destino>
+          <data_partida>22/07/2025</data_partida>
+          <classe>Q/Q</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>COMPROMISSO DEFINIDO POR TERCEIRO - HORARIO DE CHEGADA DO VOO NO DESTINO NAO ATENDE NECESSIDADE</info_adicionais>
+  </bilhete>
+</bilhetes>

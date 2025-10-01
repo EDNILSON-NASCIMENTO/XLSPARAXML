@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24757798</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13225</idv_externo>
+    <data_lancamento>11/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>g3</fornecedor>
+    <num_bilhete>2141210458</num_bilhete>
+    <prestador_svc>g3</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>501010 - CENTRAL DE PROPOSTAS - DIRETORIA COMERCIAL</ccustos_cliente>
+    <solicitante>CRISTIANO VIANA</solicitante>
+    <aprovador>FELIPE CARNEIRO</aprovador>
+    <departamento>INTELIGENCIA CLINICO OPERACIONAL</departamento>
+    <motivo_viagem>DESENVOLVIMENTO DE NEGOCIOS</motivo_viagem>
+    <motivo_recusa>POR PRECO</motivo_recusa>
+    <matricula>108252</matricula>
+    <numero_requisicao>13225</numero_requisicao>
+    <localizador>SEIISG</localizador>
+    <passageiro>CRISTIANO VIANA</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>258.85</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>59.95</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>SDU</aeroporto_origem>
+          <aeroporto_destino>CGH</aeroporto_destino>
+          <data_partida>05/08/2025</data_partida>
+          <classe>O</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CGH</aeroporto_origem>
+          <aeroporto_destino>SDU</aeroporto_destino>
+          <data_partida>05/08/2025</data_partida>
+          <classe>O</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>HORARIO DO VOO MAIS BARATO NAO ATENDE A AGENDA</info_adicionais>
+  </bilhete>
+</bilhetes>

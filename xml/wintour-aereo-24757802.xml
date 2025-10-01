@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24757802</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13215</idv_externo>
+    <data_lancamento>11/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>ad</fornecedor>
+    <num_bilhete>3023378060</num_bilhete>
+    <prestador_svc>ad</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>102005 - CELULA 5 - COMERCIAL (POS VENDA)</ccustos_cliente>
+    <solicitante>ANELISE CRISTINA HENNIG RODRIGUES</solicitante>
+    <aprovador>RENATA VARANDA ROCHA</aprovador>
+    <departamento>CELULA 5</departamento>
+    <motivo_viagem>REUNIAO COM CLIENTE</motivo_viagem>
+    <motivo_recusa>POR PRAZO</motivo_recusa>
+    <matricula>ODP308182</matricula>
+    <numero_requisicao>13215</numero_requisicao>
+    <localizador>LG5MFI</localizador>
+    <passageiro>ANELISE CRISTINA HENNIG RODRIGUES</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>931.22</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>107.34</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>156.92</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CWB</aeroporto_origem>
+          <aeroporto_destino>CGH</aeroporto_destino>
+          <data_partida>21/07/2025</data_partida>
+          <classe>UU/P</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CGH</aeroporto_origem>
+          <aeroporto_destino>CWB</aeroporto_destino>
+          <data_partida>21/07/2025</data_partida>
+          <classe>UU/P</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>ATENDER SOLICITACAO DE CLIENTE -</info_adicionais>
+  </bilhete>
+</bilhetes>

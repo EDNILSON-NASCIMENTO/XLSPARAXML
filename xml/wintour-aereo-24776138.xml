@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24776138</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13264</idv_externo>
+    <data_lancamento>16/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>ad</fornecedor>
+    <num_bilhete>3023395516</num_bilhete>
+    <prestador_svc>ad</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>302008 - REDE CREDENCIADA - SAO PAULO CAPITAL E GRANDE SAO PAULO - CLINICO OPERACIONAL (GESTAO DE REDE)</ccustos_cliente>
+    <solicitante>TANIE LIRA</solicitante>
+    <aprovador>TANIE LIRA</aprovador>
+    <departamento>REDE CREDENCIADA SAO PAULO E GRANDE SAO</departamento>
+    <motivo_viagem>CONFERENCIA</motivo_viagem>
+    <motivo_recusa>POR PRECO</motivo_recusa>
+    <matricula>105732</matricula>
+    <numero_requisicao>13264</numero_requisicao>
+    <localizador>PWQK5K</localizador>
+    <passageiro>CARLA GUIMENTI</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>1521.47</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>53.57</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>FOR</aeroporto_origem>
+          <aeroporto_destino>SSA</aeroporto_destino>
+          <data_partida>08/08/2025</data_partida>
+          <classe>M</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>SSA</aeroporto_origem>
+          <aeroporto_destino>FOR</aeroporto_destino>
+          <data_partida>08/08/2025</data_partida>
+          <classe>M</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>HORARIO DE CHEGADA DO VOO NO DESTINO NAO ATENDE NECESSIDADE</info_adicionais>
+  </bilhete>
+</bilhetes>

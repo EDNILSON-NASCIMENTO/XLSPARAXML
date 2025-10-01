@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24714533</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13024</idv_externo>
+    <data_lancamento>02/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>g3</fornecedor>
+    <num_bilhete>2140599452</num_bilhete>
+    <prestador_svc>g3</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>3 CLIDEC - CLINICA DENTARIA ESPECIALIZADA CURA D ARS</cliente>
+    <ccustos_cliente>302006 - UNIDADES PROPRIAS - CLINICO OPERACIONAL (CONSULTORIOS E LABORATORIOS)</ccustos_cliente>
+    <solicitante>TANIE LIRA</solicitante>
+    <aprovador>TANIE LIRA</aprovador>
+    <departamento>FIAT - NUCLEO JABOATAO/ PE</departamento>
+    <motivo_viagem>DESENVOLVIMENTO DE NEGOCIOS</motivo_viagem>
+    <motivo_recusa>POR PRECO</motivo_recusa>
+    <matricula>200868</matricula>
+    <numero_requisicao>13024</numero_requisicao>
+    <localizador>YWKTUO</localizador>
+    <passageiro>LUCILIA VIEIRA</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>838.34</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>31.44</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>GRU</aeroporto_origem>
+          <aeroporto_destino>POA</aeroporto_destino>
+          <data_partida>28/07/2025</data_partida>
+          <classe>U</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>POA</aeroporto_origem>
+          <aeroporto_destino>GRU</aeroporto_destino>
+          <data_partida>28/07/2025</data_partida>
+          <classe>U</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>HORARIO DE CHEGADA DO VOO NO DESTINO NAO ATENDE NECESSIDADE</info_adicionais>
+  </bilhete>
+</bilhetes>

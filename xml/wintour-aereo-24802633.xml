@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24802633</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13349</idv_externo>
+    <data_lancamento>22/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>ad</fornecedor>
+    <num_bilhete>3023425681</num_bilhete>
+    <prestador_svc>ad</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>2 ODONTOPREV SERVICOS LTDA</cliente>
+    <ccustos_cliente>302012 - REDE CREDENCIADA - REGIAO CENTRO OESTE - CLINICO OPERACIONAL (GESTAO DE REDE)</ccustos_cliente>
+    <solicitante>TANIE LIRA</solicitante>
+    <aprovador>TANIE LIRA</aprovador>
+    <departamento>REDE CREDENCIADA REGIAO CENTRO OESTE</departamento>
+    <motivo_viagem>RELACIONAMENTO E GESTAO DE REDE CREDENCIADA</motivo_viagem>
+    <motivo_recusa>POR PRECO</motivo_recusa>
+    <matricula>307150</matricula>
+    <numero_requisicao>13349</numero_requisicao>
+    <localizador>MS94MR</localizador>
+    <passageiro>ALEXANDRE VALERIO</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>3962.54</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>94.64</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>736.75</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>MGF</aeroporto_origem>
+          <aeroporto_destino>ROO</aeroporto_destino>
+          <data_partida>25/08/2025</data_partida>
+          <classe>K/K/F/F</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>ad</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>ROO</aeroporto_origem>
+          <aeroporto_destino>MGF</aeroporto_destino>
+          <data_partida>25/08/2025</data_partida>
+          <classe>K/K/F/F</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>HORARIO DE CHEGADA DO VOO NO DESTINO NAO ATENDE NECESSIDADE</info_adicionais>
+  </bilhete>
+</bilhetes>

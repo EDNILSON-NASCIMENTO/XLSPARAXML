@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24798065</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13332</idv_externo>
+    <data_lancamento>21/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>la</fornecedor>
+    <num_bilhete>2971298724</num_bilhete>
+    <prestador_svc>la</prestador_svc>
+    <forma_de_pagamento>iv</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>JULIANA DOS SANTOS PINTO</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>501001 - DIRETORIA COMERCIAL EMPRESARIAL - DIRETORIA COMERCIAL</ccustos_cliente>
+    <solicitante>MARIA GABRIELA LIMA</solicitante>
+    <aprovador>ELSEN CARMO</aprovador>
+    <departamento>PÓS VENDA</departamento>
+    <motivo_viagem>REUNIAO COM CLIENTE</motivo_viagem>
+    <motivo_recusa>POR PRAZO</motivo_recusa>
+    <matricula>FEODPV01125</matricula>
+    <numero_requisicao>13332</numero_requisicao>
+    <localizador>IRZIKL1</localizador>
+    <passageiro>PAULO CABRAL</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>2749.88</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>0.00</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>la</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>FOR</aeroporto_origem>
+          <aeroporto_destino>GRU</aeroporto_destino>
+          <data_partida>02/08/2025</data_partida>
+          <classe>V/N</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>la</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>GRU</aeroporto_origem>
+          <aeroporto_destino>FOR</aeroporto_destino>
+          <data_partida>02/08/2025</data_partida>
+          <classe>V/N</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>COMPROMISSO DEFINIDO POR TERCEIRO - IMPLANTACAO IMPORTANTE DA OAB RJ</info_adicionais>
+  </bilhete>
+</bilhetes>

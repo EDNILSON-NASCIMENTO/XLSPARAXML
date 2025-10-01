@@ -18,7 +18,34 @@ fsSync.mkdirSync(LOG_DIR, { recursive: true });
 // Agente HTTPS para ignorar erros de certificado (equivalente a CURLOPT_SSL_VERIFYPEER = 0)
 const httpsAgent = new https.Agent({ rejectUnauthorized: false });
 
-// ROTA PARA LISTAR XMLS
+// =================================================================
+// NOVA FUNÇÃO DE LOG
+// =================================================================
+/**
+ * Salva uma mensagem de log em um arquivo diário.
+ * @param {string} message A mensagem para salvar.
+ */
+async function savelog(message) {
+  try {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    
+    const logFileName = `envio_${year}${month}${day}.log`;
+    const logFilePath = path.join(LOG_DIR, logFileName);
+    
+    const timestamp = date.toISOString().replace('T', ' ').substring(0, 19);
+    const logMessage = `[${timestamp}] ${message}\n`;
+
+    await fs.appendFile(logFilePath, logMessage);
+  } catch (error) {
+    console.error('Falha ao escrever no arquivo de log:', error);
+  }
+}
+// =================================================================
+
+// ROTA PARA LISTAR XMLS (sem alterações)
 router.get('/list', async (req, res) => {
   try {
     const files = await fs.readdir(XML_DIR);
@@ -33,20 +60,20 @@ router.get('/list', async (req, res) => {
     xmlFiles.forEach(file => {
       const statusInfo = statusData[file];
       const statusHtml = statusInfo 
-        ? `<span style="color:${statusInfo.status === 'OK' ? 'green' : 'red'};">${statusInfo.status} (${statusInfo.data})</span>` 
+        ? `<span style="color:${statusInfo.status === 'OK' ? 'green' : 'red'};">${statusInfo.status} (${new Date(statusInfo.data).toLocaleString('pt-BR')})</span>` 
         : 'Pendente';
 
       html += `
         <tr>
-          <td><input type="checkbox" name="xml_files[]" value="${file}"></td>
-          <td>${file}</td>
+          <td><input type="checkbox" name="xml_files[]" value="${file}"></td>       
+          <td><a href="/xml/${file}" target="_blank">${file}</a></td>
           <td>${statusHtml}</td>
         </tr>
       `;
     });
     res.send(html);
   } catch (error) {
-    if (error.code === 'ENOENT') { // Se a pasta 'xml' não existir
+    if (error.code === 'ENOENT') {
       res.send('<tr><td colspan="3">Nenhum arquivo XML encontrado.</td></tr>');
     } else {
       res.status(500).send(`<tr><td colspan="3" style="color:red;">Erro ao listar arquivos: ${error.message}</td></tr>`);
@@ -54,7 +81,7 @@ router.get('/list', async (req, res) => {
   }
 });
 
-// ROTA PARA ENVIAR XMLS
+// ROTA PARA ENVIAR XMLS (COM LOGS ADICIONADOS)
 router.post('/send', async (req, res) => {
     const { xml_files } = req.body;
     if (!xml_files || !Array.isArray(xml_files) || xml_files.length === 0) {
@@ -67,7 +94,7 @@ router.post('/send', async (req, res) => {
         statusData = JSON.parse(await fs.readFile(STATUS_FILE, 'utf-8'));
     }
 
-    const soapTemplate = `<soapenv:Envelope ...>{XML}</aArquivo>...</soapenv:Envelope>`; // Seu template SOAP aqui
+    const soapTemplate = `<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:HubInterfacesIntf-IHubInterfaces"><soapenv:Header/><soapenv:Body><urn:importaArquivo2 soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><aPin xsi:type="xsd:string">yP1V82E2aKf8GNRfx3abgEiCjg==</aPin><aArquivo xsi:type="xsd:string">{XML}</aArquivo><aLivre xsi:type="xsd:string">UNIGLOBEPRO</aLivre></urn:importaArquivo2></soapenv:Body></soapenv:Envelope>`;
 
     for (const filename of xml_files) {
         try {
@@ -76,33 +103,42 @@ router.post('/send', async (req, res) => {
             const base64Content = Buffer.from(xmlContent).toString('base64');
             const envelope = soapTemplate.replace('{XML}', base64Content);
             
+            // ADICIONADO: LOGS DO ARQUIVO E DO SOAP ENVIADO
+            await savelog(`ARQUIVO: ${filename}`);
+            await savelog(`SOAP: ${envelope}`);
+            
             const response = await axios.post(
                 'https://www.digirotas.com/HubInterfacesSoap/soap/IHubInterfaces',
                 envelope,
                 {
                     headers: { 'Content-Type': 'text/xml;charset=UTF-8' },
-                    auth: { username: 'hubstur', password: 'Password@123' }, // Substitua com suas credenciais
+                    auth: { username: 'hubstur', password: 'Password@102030' }, // ATENÇÃO: Verifique se a senha está correta
                     httpsAgent
                 }
             );
 
             const responseData = response.data;
+
+            // ADICIONADO: LOG DA RESPOSTA
+            await savelog(`RESPOSTA: ${responseData}`);
+
             const success = responseData && !responseData.includes('#ERRO#');
             results[filename] = {
                 success,
                 message: success ? '✅ Enviado com sucesso' : `❌ Erro: ${responseData}`
             };
             
-            // Atualiza status
             statusData[filename] = {
-                tipo: 'XML', // Lógica para extrair tipo pode ser adicionada
-                data: new Date().toLocaleString('pt-BR'),
+                data: new Date().toISOString(),
                 status: success ? 'OK' : 'ERRO'
             };
 
         } catch (error) {
-            results[filename] = { success: false, message: `❌ Erro de comunicação: ${error.message}` };
-            statusData[filename] = { tipo: 'XML', data: new Date().toLocaleString('pt-BR'), status: 'ERRO' };
+            const errorMessage = error.response ? error.response.data : error.message;
+            // ADICIONADO: LOG DO ERRO
+            await savelog(`ERRO: ${errorMessage}`);
+            results[filename] = { success: false, message: `❌ Erro de comunicação: ${errorMessage}` };
+            statusData[filename] = { data: new Date().toISOString(), status: 'ERRO' };
         }
     }
 
@@ -111,7 +147,7 @@ router.post('/send', async (req, res) => {
 });
 
 
-// ROTA PARA ARQUIVAR E BAIXAR XMLS
+// ROTA PARA ARQUIVAR E BAIXAR XMLS (sem alterações)
 router.post('/archive', async (req, res) => {
     try {
         const files = await fs.readdir(XML_DIR);
@@ -127,12 +163,10 @@ router.post('/archive', async (req, res) => {
             await fs.mkdir(subfolderPath);
         }
 
-        // Mover arquivos
         for (const file of xmlFiles) {
             await fs.rename(path.join(XML_DIR, file), path.join(subfolderPath, file));
         }
 
-        // Criar ZIP
         const zipFilename = `xmls_${date.replace(/-/g, '')}.zip`;
         const zipFilePath = path.join(subfolderPath, zipFilename);
         const output = fsSync.createWriteStream(zipFilePath);
@@ -142,13 +176,13 @@ router.post('/archive', async (req, res) => {
             res.json({
                 sucesso: true,
                 mensagem: 'Arquivos arquivados e ZIP gerado.',
-                caminho_zip: `/xml/${date}/${zipFilename}` // Caminho relativo para o cliente
+                caminho_zip: `/xml/${date}/${zipFilename}`
             });
         });
         
         archive.on('error', (err) => { throw err; });
         archive.pipe(output);
-        archive.directory(subfolderPath, false);
+        archive.glob('*.xml', { cwd: subfolderPath });
         await archive.finalize();
 
     } catch (error) {

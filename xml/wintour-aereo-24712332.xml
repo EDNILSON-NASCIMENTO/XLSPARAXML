@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bilhetes>
+  <nr_arquivo>24712332</nr_arquivo>
+  <data_geracao>01/10/2025</data_geracao>
+  <hora_geracao>14:55</hora_geracao>
+  <nome_agencia>uniglobe pro</nome_agencia>
+  <versao_xml>4</versao_xml>
+  <bilhete>
+    <idv_externo>13019</idv_externo>
+    <data_lancamento>01/07/2025</data_lancamento>
+    <codigo_produto>tkt</codigo_produto>
+    <fornecedor>g3</fornecedor>
+    <num_bilhete>2140547579</num_bilhete>
+    <prestador_svc>g3</prestador_svc>
+    <forma_de_pagamento>cc</forma_de_pagamento>
+    <moeda>brl</moeda>
+    <emissor>TMS</emissor>
+    <cliente>1 ODONTOPREV S A</cliente>
+    <ccustos_cliente>104009 - CELULA 14 - BBDENTAL - COMERCIAL (POS VENDA)</ccustos_cliente>
+    <solicitante>TANIA VALERIA DA COSTA</solicitante>
+    <aprovador>KETILENE MORAES</aprovador>
+    <departamento>CELULA 14</departamento>
+    <motivo_viagem>REUNIAO COM CLIENTE</motivo_viagem>
+    <motivo_recusa>-</motivo_recusa>
+    <matricula>105725</matricula>
+    <numero_requisicao>13019</numero_requisicao>
+    <localizador>IWMNRW</localizador>
+    <passageiro>TANIA VALERIA DA COSTA</passageiro>
+    <tipo_domest_inter>d</tipo_domest_inter>
+    <tipo_roteiro>1</tipo_roteiro>
+    <valores>
+      <item>
+        <codigo>tarifa</codigo>
+        <valor>226.46</valor>
+      </item>
+      <item>
+        <codigo>taxa</codigo>
+        <valor>33.56</valor>
+      </item>
+      <item>
+        <codigo>taxa_du</codigo>
+        <valor>0.00</valor>
+      </item>
+    </valores>
+    <roteiro>
+      <aereo>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CNF</aeroporto_origem>
+          <aeroporto_destino>CGH</aeroporto_destino>
+          <data_partida>08/08/2025</data_partida>
+          <classe>O</classe>
+        </trecho>
+        <trecho>
+          <cia_iata>g3</cia_iata>
+          <numero_voo>-</numero_voo>
+          <aeroporto_origem>CGH</aeroporto_origem>
+          <aeroporto_destino>CNF</aeroporto_destino>
+          <data_partida>08/08/2025</data_partida>
+          <classe>O</classe>
+        </trecho>
+      </aereo>
+    </roteiro>
+    <info_adicionais>-</info_adicionais>
+  </bilhete>
+</bilhetes>
