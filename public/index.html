@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Importador de Planilhas (Excel) para Wintour - Node.js</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Importador de Planilhas e Envio de XML para Wintour (Node.js)</h1>
+
+    <h2>1. Importar Planilha (Excel/CSV)</h2>
+    <form id="importForm" enctype="multipart/form-data">
+      <label for="tipo">Tipo de importação:</label>
+      <select name="tipo" id="tipo" required>
+        <option value="aereo">Aereo</option>
+        <option value="hotel">Hotel</option>
+        <option value="carro">Carro</option>
+        <option value="onibus">Onibus</option>
+      </select><br><br>
+      
+      <input type="file" name="file" id="fileInput" required>
+      
+      <button type="submit">Importar Planilha</button>
+    </form>
+    <div id="importResult" class="result-box"></div>
+
+    <h2>2. XMLs disponíveis para envio</h2>
+    <form id="envioForm">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" id="selectAllCheckbox">
+              <label for="selectAllCheckbox">Todos</label>
+            </th>
+            <th>Arquivo XML</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="xmlList">
+          </tbody>
+      </table>
+      <button type="submit">🚀 Enviar Selecionados</button>
+    </form>
+    <div id="status" class="result-box"></div>
+    
+    <div class="button-group">
+        <button id="baixarXmlsBtn">📦 Baixar Todos os XMLs (.zip) e Arquivar</button>
+        </div>
+  </div>
+
+  <div id="splash">
+    <div class="spinner"></div>
+    <span id="splashText">Processando, por favor aguarde...</span>
+  </div>
+
+  <script>
+    // Função para mostrar e esconder a tela de loading (splash screen)
+    function showSplash(text) {
+        document.getElementById('splashText').textContent = text;
+        document.getElementById('splash').style.display = 'flex';
+    }
+    function hideSplash() {
+        document.getElementById('splash').style.display = 'none';
+    }
+
+    // Função para configurar a lógica do checkbox "Selecionar Todos"
+    function setupSelectAll() {
+        const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+        const fileCheckboxes = document.querySelectorAll('input[name="xml_files[]"]');
+        if (!selectAllCheckbox || fileCheckboxes.length === 0) return;
+
+        selectAllCheckbox.addEventListener('change', function() {
+            fileCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; });
+        });
+
+        fileCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                selectAllCheckbox.checked = [...fileCheckboxes].every(cb => cb.checked);
+            });
+        });
+    }
+    
+    // Função para carregar a lista de XMLs do servidor
+    async function loadXmlList() {
+        try {
+            const response = await fetch('/api/xml/list');
+            if (!response.ok) throw new Error('Falha ao carregar lista de XMLs.');
+            
+            const html = await response.text();
+            const xmlListBody = document.getElementById('xmlList');
+            xmlListBody.innerHTML = html || '<tr><td colspan="3">Nenhum arquivo XML encontrado.</td></tr>';
+            setupSelectAll();
+        } catch (error) {
+            document.getElementById('xmlList').innerHTML = `<tr><td colspan="3" style="color:red;">${error.message}</td></tr>`;
+        }
+    }
+
+    // Lógica para o formulário de importação
+    document.getElementById('importForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        showSplash('Importando planilha, por favor aguarde...');
+        document.getElementById('importResult').innerHTML = '';
+
+        const tipo = e.target.tipo.value;
+        const formData = new FormData();
+        formData.append('file', e.target.file.files[0]);
+
+        try {
+            const response = await fetch(`/api/upload/${tipo}`, {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+            
+            if (!response.ok) {
+                throw new Error(data.error || 'Erro desconhecido no servidor.');
+            }
+
+            let resultHtml = '<p style="color: green;"><strong>Importação Concluída!</strong></p>';
+            if (data.arquivosGerados && data.arquivosGerados.length > 0) {
+                resultHtml += `<p>${data.arquivosGerados.length} arquivo(s) XML gerado(s) com sucesso.</p>`;
+            }
+            if (data.erros && data.erros.length > 0) {
+                resultHtml += `<p style="color: orange;"><strong>Avisos/Erros encontrados:</strong></p><ul>`;
+                data.erros.forEach(err => {
+                    resultHtml += `<li>${err}</li>`;
+                });
+                resultHtml += '</ul>';
+            }
+            
+            document.getElementById('importResult').innerHTML = resultHtml;
+            await loadXmlList(); // Atualiza a lista de XMLs
+
+        } catch (err) {
+            document.getElementById('importResult').innerHTML = `<p style="color: red;"><strong>Erro:</strong> ${err.message}</p>`;
+        } finally {
+            hideSplash();
+            document.getElementById('fileInput').value = ''; // Limpa o campo de arquivo
+        }
+    });
+
+    // Lógica de envio de XML
+    document.getElementById('envioForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const checkboxes = document.querySelectorAll('input[name="xml_files[]"]:checked');
+        const statusDiv = document.getElementById('status');
+        statusDiv.innerHTML = '';
+
+        if (checkboxes.length === 0) {
+            alert('Selecione pelo menos um arquivo XML para enviar.');
+            return;
+        }
+
+        showSplash(`Enviando ${checkboxes.length} arquivo(s) XML...`);
+
+        const filesToSend = Array.from(checkboxes).map(cb => cb.value);
+
+        try {
+            const response = await fetch('/api/xml/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ xml_files: filesToSend })
+            });
+
+            const results = await response.json();
+            if (!response.ok) throw new Error(results.error || 'Erro na requisição.');
+            
+            let logHtml = '<h3>Resultados do Envio:</h3><ul>';
+            for (const filename in results) {
+                const result = results[filename];
+                const message = result.success 
+                    ? `<span style="color: green;">${result.message}</span>` 
+                    : `<span style="color: red;">${result.message}</span>`;
+                logHtml += `<li><strong>${filename}</strong>: ${message}</li>`;
+            }
+            logHtml += '</ul>';
+            statusDiv.innerHTML = logHtml;
+
+            await loadXmlList(); // Recarrega a lista para atualizar os status
+
+        } catch (err) {
+            statusDiv.innerHTML = `<p style="color: red;"><strong>Erro de comunicação:</strong> ${err.message}</p>`;
+        } finally {
+            hideSplash();
+        }
+    });
+  
+    // Lógica para o botão de baixar e arquivar XMLs
+    document.getElementById('baixarXmlsBtn').addEventListener('click', async function() {
+        showSplash('Arquivando e compactando XMLs...');
+        try {
+            const response = await fetch('/api/xml/archive', { method: 'POST' });
+            const data = await response.json();
+
+            if (data.sucesso) {
+                // Cria um link temporário para iniciar o download
+                const link = document.createElement('a');
+                link.href = data.caminho_zip;
+                link.download = data.caminho_zip.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                alert('Arquivos arquivados com sucesso! A página será atualizada.');
+                window.location.reload();
+            } else {
+                throw new Error(data.mensagem);
+            }
+        } catch (err) {
+            alert('Erro: ' + err.message);
+        } finally {
+            hideSplash();
+        }
+    });
+
+    // Carrega a lista de XMLs assim que a página é carregada
+    document.addEventListener('DOMContentLoaded', loadXmlList);
+  </script>
+</body>
+</html>

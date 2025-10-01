@@ -1,0 +1,24 @@
+# Arquivo de dependências do Node.js
+# Esta pasta pode ter milhares de arquivos e é recriada com "npm install"
+/node_modules
+
+# Arquivo de variáveis de ambiente
+# Contém senhas e chaves de API, NUNCA deve ir para o repositório
+.env
+
+# Arquivos de Log
+# Logs são específicos do ambiente e não devem ser versionados
+/logs
+npm-debug.log*
+
+# Pasta de uploads temporários
+# Gerada pelo multer para armazenar arquivos durante o upload
+/uploads
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Opcional: Arquivos de configuração de editores de código
+.vscode/
+.idea/
