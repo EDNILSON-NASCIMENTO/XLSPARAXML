@@ -22,3 +22,7 @@ Thumbs.db
 # Opcional: Arquivos de configuração de editores de código
 .vscode/
 .idea/
+
+# Excluindo a pasta XMLs pois pode conter muitos arquivos
+/xml
+*.xml
