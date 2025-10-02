@@ -35,12 +35,41 @@ const formatarDataSQL = (dataStr) => {
  * @param {string|number} valor - O valor a ser limpo.
  * @returns {number} - O valor como float.
  */
+// const limparValorDecimal = (valor) => {
+//   if (typeof valor === 'number') return valor;
+//   if (!valor || typeof valor !== 'string') return 0;
+  
+//   const limpo = valor.replace(/R\$\s?|\.|'/g, '').replace(',', '.').trim();
+//   const floatVal = parseFloat(limpo);
+  
+//   return isNaN(floatVal) ? 0 : floatVal;
+// };
+
 const limparValorDecimal = (valor) => {
+  // --- INÍCIO DA DEPURAÇÃO ---
+  // console.log(`\n--- Depurando limparValorDecimal ---`);
+  // console.log(`1. Valor recebido: "${valor}" (Tipo: ${typeof valor})`);
+  // --- FIM DA DEPURAÇÃO ---
+
   if (typeof valor === 'number') return valor;
   if (!valor || typeof valor !== 'string') return 0;
-  
-  const limpo = valor.replace(/R\$\s?|\.|'/g, '').replace(',', '.').trim();
-  const floatVal = parseFloat(limpo);
+
+  const semMoeda = valor.replace(/R\$\s*/g, '');
+  // --- DEPURAÇÃO ---
+  // console.log(`2. Após remover R$: "${semMoeda}"`);
+
+  const semMilhar = semMoeda.replace(/\./g, '');
+  // --- DEPURAÇÃO ---
+  // console.log(`3. Após remover ponto de milhar: "${semMilhar}"`);
+
+  const formatoJs = semMilhar.replace(',', '.');
+  // --- DEPURAÇÃO ---
+  // console.log(`4. Após trocar vírgula por ponto: "${formatoJs}"`);
+
+  const floatVal = parseFloat(formatoJs);
+  // --- DEPURAÇÃO ---
+  // console.log(`5. Resultado do parseFloat: ${floatVal}`);
+  // console.log(`------------------------------------`);
   
   return isNaN(floatVal) ? 0 : floatVal;
 };
